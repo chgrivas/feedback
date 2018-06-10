@@ -53,7 +53,7 @@
 						<configuration>
 							<sources>
 								<fileset>
-									<directory>${pom.basedir}/src/test/groovy</directory>
+									<directory>src/test/groovy</directory>
 									<includes>
 										<include>**/*.groovy</include>
 									</includes>
