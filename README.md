@@ -1,5 +1,5 @@
-# Feedback Loop
-> An opinionated way to organize a java project
+# Feedback
+> An algorith and data structure benchmark
 
-A project that will be used as a reference for every future java
-project.
+A project that will be used to gather data structures and agorithms
+and propose a way to compare them.
