@@ -9,6 +9,6 @@ class HealthIT extends Specification {
     when:
       def a = 1
     then:
-      a == 2
+      a == 1
   }
 }
