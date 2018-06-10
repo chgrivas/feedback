@@ -1,17 +1,17 @@
 package com.chgrivas.feedback.core.collections.list;
 
 public class Node<T> {
-	private T data;
+  private T data;
 
-	public Node(T data) {
-		this.data = data;
-	}
+  public Node(T data) {
+    this.data = data;
+  }
 
-	public T getData() {
-		return data;
-	}
+  public T getData() {
+    return data;
+  }
 
-	public void setData(T data) {
-		this.data = data;
-	}
+  public void setData(T data) {
+    this.data = data;
+  }
 }
