@@ -30,6 +30,13 @@ public class BitManipulationHelper {
     return count;
   }
 
+  /**
+   * Checks how many bits we need to flip in order
+   * to convert a to b.
+   *
+   * @param a
+   * @param b
+   */
   int bitSwapRequired2(int a, int b) {
     int count = 0;
     for (int c = a ^ b; c != 0; c = c & (c - 1)) {
