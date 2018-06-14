@@ -14,4 +14,20 @@ public class BitManipulationHelper {
   public boolean isPowerOfTwo(Long candidate) {
     return (candidate & (candidate - 1)) == 0;
   }
+
+  /**
+   * Checks how many bits we need to flip in order
+   * to convert a to b.
+   *
+   * @param a
+   * @param b
+   */
+  public int checkBitFlipToBecomeEqual(int a, int b) {
+
+    int count = 0;
+    for (int i = a ^ b; i != 0; i = i >> 1) {
+      count += i & 1;
+    }
+    return count;
+  }
 }

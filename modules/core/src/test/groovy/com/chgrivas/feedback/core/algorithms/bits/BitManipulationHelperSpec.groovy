@@ -28,6 +28,18 @@ class BitManipulationHelperSpec extends Specification {
       14      | false
       3       | false
       8       | true
+  }
 
+  @Unroll
+  def "Flipping number of bits get detected as expected"() {
+    when:
+      def result = bitManipulationHelper.checkBitFlipToBecomeEqual(a, b)
+    then:
+      result == expectedResult
+    where:
+      a   |  b  |expectedResult
+      1   |  2  | 2
+      1   |  3  | 1
+      10  | 344 | 4
   }
 }
