@@ -33,9 +33,22 @@ class BitManipulationHelperSpec extends Specification {
   @Unroll
   def "Flipping number of bits get detected as expected"() {
     when:
-      def result = bitManipulationHelper.checkBitFlipToBecomeEqual(a, b)
+      def result = bitManipulationHelper.bitSwapRequired1(a, b)
     then:
       result == expectedResult
+    where:
+      a   |  b  |expectedResult
+      1   |  2  | 2
+      1   |  3  | 1
+      10  | 344 | 4
+  }
+
+  @Unroll
+  def "Flipping number of bits get detected as expected with another algorithm"() {
+    when:
+        def result = bitManipulationHelper.bitSwapRequired2(a, b)
+    then:
+    result == expectedResult
     where:
       a   |  b  |expectedResult
       1   |  2  | 2
