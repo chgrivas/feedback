@@ -44,4 +44,15 @@ public class BitManipulationHelper {
     }
     return count;
   }
+
+  /**
+   * Swap the positions of odd and even bits.
+   * e.g. bit 0 and bit 1, bit 2 and bit 3 ...
+   *
+   * @param x
+   * @return
+   */
+  public int swapOddEvenBits(int x) {
+    return (((x & 0xaaaaaaaa) >>> 1) | ((x & 0x55555555) << 1));
+  }
 }

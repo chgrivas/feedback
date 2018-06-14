@@ -55,4 +55,15 @@ class BitManipulationHelperSpec extends Specification {
       1   |  3  | 1
       10  | 344 | 4
   }
+
+  def "Swapping bits odd and even work as expected"() {
+    when:
+      def result = bitManipulationHelper.swapOddEvenBits(a)
+    then:
+      result == expectedResult
+    where:
+      a   | expectedResult
+      1   | 2
+      5   | 10
+  }
 }
