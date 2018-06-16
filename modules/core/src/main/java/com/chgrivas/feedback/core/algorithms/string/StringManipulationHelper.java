@@ -24,4 +24,16 @@ public class StringManipulationHelper {
     }
     return true;
   }
+
+  /**
+   * Replace all spaces with %20.
+   *
+   * @param input
+   * @param trueLength
+   * @return
+   */
+  public String urlify(char[] input, int trueLength) {
+    // TBD
+    return input.toString();
+  }
 }
