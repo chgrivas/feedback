@@ -31,16 +31,16 @@ class StringManipulationHelperSpec extends Specification {
 
   def "check compressing a string that is bigger returns the original"() {
     when:
-    def result = algorithm.compress("asdd")
+      def result = algorithm.compress("asdd")
     then:
-    result == "asdd"
+      result == "asdd"
   }
 
   def "check compressing a string that is of same length returns the original"() {
     when:
-    def result = algorithm.compress("aassdd")
+      def result = algorithm.compress("aassdd")
     then:
-    result == "aassdd"
+      result == "aassdd"
   }
 
   def "Rotations are detected correctly"() {
@@ -48,5 +48,12 @@ class StringManipulationHelperSpec extends Specification {
       def result = algorithm.isRotation("welcome", "comewel")
     then:
       result
+  }
+
+  def "non - Rotations are detected correctly"() {
+    when:
+      def result = algorithm.isRotation("welcoee", "comewel")
+    then:
+      !result
   }
 }
