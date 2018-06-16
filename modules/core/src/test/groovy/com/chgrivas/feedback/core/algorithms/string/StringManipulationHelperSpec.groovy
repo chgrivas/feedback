@@ -42,4 +42,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
     result == "aassdd"
   }
+
+  def "Rotations are detected correctly"() {
+    when:
+      def result = algorithm.isRotation("welcome", "comewel")
+    then:
+      result
+  }
 }
