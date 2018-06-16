@@ -48,4 +48,25 @@ public class StringManipulationHelper {
 
     return compressed.length() < input.length() ? compressed.toString() : input;
   }
+
+  /**
+   * Checks if s1 is a rotation fo s2 with one call to isSubstring.
+   *
+   * @param s1
+   * @param s2
+   * @return
+   */
+  public boolean isRotation(String s1, String s2) {
+      int len = s1.length();
+
+      if (len == s2.length() && len> 8) {
+        String s1s1 = s1 + s1;
+        return isSubstring(s1s1, s2);
+      }
+      return false;
+  }
+
+  private boolean isSubstring(String s1, String s2) {
+    return s1.contains(s2);
+  }
 }
