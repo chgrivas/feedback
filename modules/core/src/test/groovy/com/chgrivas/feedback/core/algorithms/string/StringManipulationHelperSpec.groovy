@@ -21,4 +21,11 @@ class StringManipulationHelperSpec extends Specification {
       ""         | true
       "ere"      | false
   }
+
+  def "check compressing a string that gets smaller takes place corerctly"() {
+    when:
+      def result = algorithm.compress("aaaaasdddssssssss")
+    then:
+      result == "a5s1d3s8"
+  }
 }

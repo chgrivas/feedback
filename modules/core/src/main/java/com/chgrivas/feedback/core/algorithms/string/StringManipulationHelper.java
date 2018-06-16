@@ -39,9 +39,9 @@ public class StringManipulationHelper {
     for (int i = 0; i < input.length(); i++) {
       consequtive++;
 
-      if (i + 1 > input.length() || input.charAt(i) != input.charAt(i)) {
+      if (i + 1 >= input.length() || input.charAt(i + 1) != input.charAt(i)) {
         compressed.append(input.charAt(i));
-        compressed.append(compressed);
+        compressed.append(consequtive);
         consequtive = 0;
       }
     }
