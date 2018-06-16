@@ -28,4 +28,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       result == "a5s1d3s8"
   }
+
+  def "check compressing a string that is bigger returns the original"() {
+    when:
+    def result = algorithm.compress("asdd")
+    then:
+    result == "asdd"
+  }
 }
