@@ -35,4 +35,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
     result == "asdd"
   }
+
+  def "check compressing a string that is of same length returns the original"() {
+    when:
+    def result = algorithm.compress("aassdd")
+    then:
+    result == "aassdd"
+  }
 }
