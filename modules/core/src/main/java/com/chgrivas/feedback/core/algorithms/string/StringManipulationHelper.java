@@ -3,8 +3,14 @@ package com.chgrivas.feedback.core.algorithms.string;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IsUniqueAlgorithm {
+public class StringManipulationHelper {
 
+  /**
+   * Checks if all the characters in a string appear just once.
+   *
+   * @param input
+   * @return
+   */
   public boolean isUnique(String input) {
     Map<Character, Boolean> appearanceMap = new HashMap<>();
 

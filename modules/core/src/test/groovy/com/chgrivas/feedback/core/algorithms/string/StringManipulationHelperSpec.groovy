@@ -4,9 +4,9 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 
-class IsUniqueAlgorithSpec extends Specification {
+class StringManipulationHelperSpec extends Specification {
 
-  IsUniqueAlgorithm algorithm = new IsUniqueAlgorithm()
+  StringManipulationHelper algorithm = new StringManipulationHelper()
 
   @Unroll
   def "The uniqueness of the characters is detected as expected"() {
