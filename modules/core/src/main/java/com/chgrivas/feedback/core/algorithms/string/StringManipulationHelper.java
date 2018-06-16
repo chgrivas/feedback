@@ -2,6 +2,7 @@ package com.chgrivas.feedback.core.algorithms.string;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class StringManipulationHelper {
 
@@ -26,14 +27,25 @@ public class StringManipulationHelper {
   }
 
   /**
-   * Replace all spaces with %20.
+   * Basic string compression.
    *
    * @param input
-   * @param trueLength
    * @return
    */
-  public String urlify(char[] input, int trueLength) {
-    // TBD
-    return input.toString();
+  public String compress(String input) {
+    StringBuilder compressed = new StringBuilder();
+
+    int consequtive = 0;
+    for (int i = 0; i < input.length(); i++) {
+      consequtive++;
+
+      if (i + 1 > input.length() || input.charAt(i) != input.charAt(i)) {
+        compressed.append(input.charAt(i));
+        compressed.append(compressed);
+        consequtive = 0;
+      }
+    }
+
+    return compressed.length() < input.length() ? compressed.toString() : input;
   }
 }
