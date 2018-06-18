@@ -56,4 +56,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       !result
   }
+
+  def "Min deletions to anagram works as expected"() {
+    when:
+      def result = algorithm.findMinDiffForAnagram("aaas", "abs")
+    then:
+      result == 3
+  }
 }
