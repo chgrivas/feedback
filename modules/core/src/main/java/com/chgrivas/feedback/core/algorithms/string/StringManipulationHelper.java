@@ -69,4 +69,39 @@ public class StringManipulationHelper {
   private boolean isSubstring(String s1, String s2) {
     return s1.contains(s2);
   }
+
+  /**
+   * Find min numbers that should be deleted in order the strings
+   * to be a valid anagram.
+   *
+   * @param a
+   * @param b
+   * @return
+   */
+  public int findMinDiffForAnagram(String a, String b) {
+    int[] aFreq = new int[26];
+    int[] bFreq = new int[26];
+
+    char[] aArray = a.toCharArray();
+    char[] bArray = b.toCharArray();
+
+    for (char anAArray : aArray) {
+      aFreq[anAArray % 97]++;
+    }
+
+    for (char aBArray : bArray) {
+      bFreq[aBArray % 97]++;
+    }
+
+    return findMinDiff(aFreq, bFreq);
+    }
+
+    private static int findMinDiff(int[] aFreq, int[] bFreq) {
+      int count = 0;
+      for (int i=0; i<26; i++) {
+        int diff = aFreq[i] > bFreq[i] ? aFreq[i] - bFreq[i] : bFreq[i] - aFreq[i];
+        count += diff;
+      }
+      return count;
+    }
 }
