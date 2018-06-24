@@ -22,6 +22,14 @@ public class TreeNode<T> {
     }
   }
 
+  public static void postOrderTraversal(TreeNode node) {
+    if (node != null) {
+      postOrderTraversal(node.left);
+      postOrderTraversal(node.right);
+      visit(node);
+    }
+  }
+
   public static void visit(TreeNode node) {
     System.out.println(node.data);
   }
