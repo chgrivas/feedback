@@ -3,6 +3,29 @@ package com.chgrivas.feedback.core.collections.tree;
 public class TreeNode<T> {
   private T data;
 
+  private TreeNode left;
+  private TreeNode right;
+
+  public static void inOrderTraversal(TreeNode node) {
+    if (node != null) {
+      inOrderTraversal(node.left);
+      visit(node);
+      inOrderTraversal(node.right);
+    }
+  }
+
+  public static void preOrderTraversal(TreeNode node) {
+    if (node != null) {
+      visit(node);
+      preOrderTraversal(node.left);
+      preOrderTraversal(node.right);
+    }
+  }
+
+  public static void visit(TreeNode node) {
+    System.out.println(node.data);
+  }
+
   public T getData() {
     return data;
   }
@@ -27,18 +50,4 @@ public class TreeNode<T> {
     this.right = right;
   }
 
-  private TreeNode left;
-  private TreeNode right;
-
-  public static void inOrderTraversal(TreeNode node) {
-    if (node != null) {
-      inOrderTraversal(node.left);
-      visit(node);
-      inOrderTraversal(node.right);
-    }
-  }
-
-  public static void visit(TreeNode node) {
-    System.out.println(node.data);
-  }
 }
