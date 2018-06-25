@@ -143,4 +143,15 @@ public class StringManipulationHelper {
 
     return stringBuilder.toString();
   }
+
+  /**
+   * Reverse recursively.
+   */
+  public String reverseRecursively(String input) {
+    if (input.length() <2) {
+      return input;
+    }
+
+    return reverseRecursively(input.substring(1)) + input.charAt(0);
+  }
 }
