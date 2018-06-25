@@ -63,4 +63,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       result == 3
   }
+
+  def "Duplicates are detected as expected"() {
+    when:
+      def result = algorithm.printDuplicateCharacters("aaaasdas");
+    then:
+      true
+  }
 }

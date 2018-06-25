@@ -1,8 +1,12 @@
 package com.chgrivas.feedback.core.algorithms.string;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 public class StringManipulationHelper {
 
@@ -104,4 +108,25 @@ public class StringManipulationHelper {
       }
       return count;
     }
+
+  /**
+   * Print the duplicate characters of a string.
+   */
+  public void printDuplicateCharacters(String input) {
+    Set<Character> chars = new HashSet<>();
+
+    Set<Character> charCount = new HashSet<>();
+
+    char[] charArray = input.toCharArray();
+    for (char c : charArray) {
+      if (charCount.contains(c)) {
+        if (!chars.contains(c)) {
+          System.out.println(c);
+        }
+        chars.add(c);
+      } else {
+        charCount.add(c);
+      }
+    }
+  }
 }
