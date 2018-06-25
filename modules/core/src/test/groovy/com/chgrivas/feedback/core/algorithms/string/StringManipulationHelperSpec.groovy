@@ -77,4 +77,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       result == "olleH"
   }
+
+  def "Reversing recursively works as expected"() {
+    when:
+    def result = algorithm.reverseRecursively("Hello")
+    then:
+    result == "olleH"
+  }
 }
