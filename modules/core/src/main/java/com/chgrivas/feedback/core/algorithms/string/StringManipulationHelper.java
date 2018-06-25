@@ -129,4 +129,18 @@ public class StringManipulationHelper {
       }
     }
   }
+
+  /**
+   * Reverse iteratively.
+   */
+  public String reverseIteratively(String input) {
+    StringBuilder stringBuilder = new StringBuilder();
+
+    char[] chars = input.toCharArray();
+    for (int i=chars.length -1; i>=0; i--) {
+      stringBuilder.append(chars[i]);
+    }
+
+    return stringBuilder.toString();
+  }
 }

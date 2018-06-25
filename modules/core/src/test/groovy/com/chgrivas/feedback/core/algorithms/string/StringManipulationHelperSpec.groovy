@@ -70,4 +70,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       true
   }
+
+  def "Reversing iteratively works as expected"() {
+    when:
+      def result = algorithm.reverseIteratively("Hello")
+    then:
+      result == "olleH"
+  }
 }
