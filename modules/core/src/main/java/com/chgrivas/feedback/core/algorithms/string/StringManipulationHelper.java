@@ -164,6 +164,29 @@ public class StringManipulationHelper {
       return "";
     }
 
-    return input;
+    StringBuilder builder = new StringBuilder();
+    Character previous = null;
+    Character current = null;
+    int count = 0;
+
+
+    for (int i=0; i< input.length(); i++) {
+      current = input.charAt(i);
+
+      if (current.equals(previous)) {
+        count++;
+      } else {
+        count = 1;
+      }
+
+      if (count <= limit) {
+        builder.append(input.charAt(i));
+      }
+
+      previous = current;
+      i++;
+    }
+
+    return builder.toString();
   }
 }
