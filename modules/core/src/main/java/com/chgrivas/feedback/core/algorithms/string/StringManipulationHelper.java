@@ -1,11 +1,8 @@
 package com.chgrivas.feedback.core.algorithms.string;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 
 public class StringManipulationHelper {
@@ -153,5 +150,15 @@ public class StringManipulationHelper {
     }
 
     return reverseRecursively(input.substring(1)) + input.charAt(0);
+  }
+
+  /**
+   * Limit consequtive characters.
+   */
+  public String limitConsequtiveCharacters(String input, int limit) {
+    if (input == null) {
+      throw new IllegalArgumentException("No string to limit was detected");
+    }
+    return input;
   }
 }
