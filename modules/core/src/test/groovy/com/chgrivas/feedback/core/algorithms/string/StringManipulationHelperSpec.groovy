@@ -98,4 +98,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       result == ""
   }
+
+  def "Limiting a bigger string to 2 chars completes as expected"() {
+    when:
+      def result = algorithm.limitConsequtiveCharacters("mississsssippppi", 2)
+    then:
+      result == "mississippi"
+  }
 }
