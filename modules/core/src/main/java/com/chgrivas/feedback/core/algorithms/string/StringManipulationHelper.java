@@ -159,6 +159,11 @@ public class StringManipulationHelper {
     if (input == null) {
       throw new IllegalArgumentException("No string to limit was detected");
     }
+
+    if (limit == 0) {
+      return "";
+    }
+
     return input;
   }
 }
