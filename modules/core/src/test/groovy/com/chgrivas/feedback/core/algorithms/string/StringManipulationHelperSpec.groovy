@@ -80,8 +80,15 @@ class StringManipulationHelperSpec extends Specification {
 
   def "Reversing recursively works as expected"() {
     when:
-    def result = algorithm.reverseRecursively("Hello")
+      def result = algorithm.reverseRecursively("Hello")
     then:
-    result == "olleH"
+      result == "olleH"
+  }
+
+  def "Limiting a string to 2 chars completes as expected"() {
+    when:
+      def result = algorithm.limitConsequtiveCharacters("Hello", 1)
+    then:
+      result == "Helo"
   }
 }

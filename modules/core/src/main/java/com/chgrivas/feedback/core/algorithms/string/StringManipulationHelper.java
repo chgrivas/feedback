@@ -166,7 +166,7 @@ public class StringManipulationHelper {
 
     StringBuilder builder = new StringBuilder();
     Character previous = null;
-    Character current = null;
+    Character current;
     int count = 0;
 
 
@@ -184,7 +184,6 @@ public class StringManipulationHelper {
       }
 
       previous = current;
-      i++;
     }
 
     return builder.toString();
