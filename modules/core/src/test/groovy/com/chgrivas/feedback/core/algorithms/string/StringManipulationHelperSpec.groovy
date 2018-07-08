@@ -91,4 +91,11 @@ class StringManipulationHelperSpec extends Specification {
     then:
       result == "Helo"
   }
+
+  def "Limiting a string to 0 chars completes as expected"() {
+    when:
+      def result = algorithm.limitConsequtiveCharacters("asdasd", 0)
+    then:
+      result == ""
+  }
 }
